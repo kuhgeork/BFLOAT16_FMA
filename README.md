@@ -1,2 +1,3 @@
 # BFLOAT16_FMA
-Brain_float16 format fused multiplier-adder
+An implementation of 
+Brain_float16 format fused multiplier-adder in Verilog
