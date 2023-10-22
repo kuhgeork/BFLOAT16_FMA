@@ -27,7 +27,8 @@ reg [15:0] num2;
 wire [15:0] result;
 wire zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf;
 
-BF16_adder dut(num1,num2,result,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf);
+//BF16_adder dut(num1,num2,result,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf);
+//BF16_multiplier dut(num1,num2,result,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf);
 
 initial
 begin
