@@ -92,7 +92,7 @@ res_mant = mant_eff2 + mant_eff1 / (2**  (exp2 - exp1));
 end
 if (res_mant[8] == 1'b1)
 begin
-res_exp = res_exp + 8'd1;
+res_exp = res_exp + 9'd1;
 res_mant = res_mant >> 1;
 
 end
