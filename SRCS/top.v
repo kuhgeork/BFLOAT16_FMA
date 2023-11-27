@@ -31,7 +31,7 @@ module top(
             
     assign A = data[47:32];
     assign B = data[31:16];
-    always @(posedge clk_in)
+    always @(PC_addr)
     begin
      if (data[49])
     //data[49] is enable
