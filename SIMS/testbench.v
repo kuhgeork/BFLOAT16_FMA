@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date: 21.10.2023 23:39:51
+// Create Date: 16.11.2023 15:48:54
 // Design Name: 
 // Module Name: testbench
 // Project Name: 
@@ -22,18 +22,24 @@
 
 module testbench;
 
-reg [15:0] num1;
-reg [15:0] num2;
-wire [15:0] result;
+reg clk, rst;
+wire [15:0] res;
 wire zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf;
+//wire [0:6] LED_out;
+//wire [3:0] Anode_Activate;
 
-//BF16_adder dut(num1,num2,result,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf);
-//BF16_multiplier dut(num1,num2,result,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf);
+top dut(clk,rst,res,zero,underflow,overflow,qNaN,sNaN,positive_inf,negative_inf,,);
+
+initial
+clk = 1'b0;
+always #20 clk = ~clk;
+
 
 initial
 begin
-#5 num1 = 16'hc20f; num2 = 16'h41a4;
-#20 $finish;
+#5 rst = 1'b1;
+#8 rst = 1'b0;
+#100 $finish;
 end
 
 endmodule
